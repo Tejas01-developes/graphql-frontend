@@ -30,6 +30,7 @@ e.preventDefault()
 try{
 const response=await Login({
     variables:{
+      name:field.name,
         email:field.email,
         password:field.password
     }
@@ -40,6 +41,7 @@ if(response.data?.adduser1.success){
     alert("user added")
 }
 }catch(err){
+    console.log(err)
     alert("add user failed")
 }
 }
